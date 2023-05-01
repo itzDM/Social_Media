@@ -1,0 +1,41 @@
+.register {
+  background-color: rgb(48 52 98 / 0.68);
+  height: 100vh;
+  .reg-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+      padding: 50px;
+      background-color: whitesmoke;
+      border-radius: 5px;
+      h2 {
+        color: darkblue;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        outline-color: darkblue;
+      }
+      button {
+        background-color: #3a45bb;
+        padding: 5px;
+        color: whitesmoke;
+        border-radius: 5px;
+      }
+    }
+  }
+}

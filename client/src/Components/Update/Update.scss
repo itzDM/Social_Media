@@ -1,0 +1,62 @@
+@import "../../style.scss";
+.update {
+  @include themeChange($themes) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    z-index: 999;
+    background-color: themed("bgSoft");
+    border-radius: 5px;
+    .u-container {
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        border-radius: 5px;
+
+        h4 {
+          cursor: pointer;
+          border: 1px solid themed("border");
+          color: themed("textColor");
+          padding: 5px;
+          border-radius: 50%;
+        }
+        span {
+          color: themed("textColor");
+        }
+
+        h2 {
+          color: themed("logo");
+        }
+
+        .inputFile {
+          margin-left: 20px;
+          border: none;
+          color: themed("tcs");
+          width: 45%;
+        }
+        input {
+          padding: 5px;
+          outline-color: themed("tcs");
+          background-color: themed("bgSoft");
+          color: themed("textColor");
+        }
+        button {
+          background-color: themed("btns");
+          padding: 5px;
+          color: themed("textColor");
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "./style.scss";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.d-home {
+  display: flex;
+  @include themeChange($themes) {
+    background-color: themed("bgSoft");
+    // height: 100vh;
+    // margin-top: 8vh;
+  }
+}
+
+.outlet {
+  flex: 6;
+  @include themeChange($themes) {
+    background-color: themed("bgSoft");
+    @include tab {
+      // height: 100vh;
+      // z-index: -1;
+    }
+    @include mobile {
+      // height: 100vh;
+      // z-index: -1;
+    }
+  }
+}

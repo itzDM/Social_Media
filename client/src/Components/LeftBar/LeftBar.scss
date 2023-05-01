@@ -1,0 +1,43 @@
+@import "../../style.scss";
+.leftBar {
+  @include tab {
+    display: none;
+  }
+  @include themeChange($themes) {
+    flex: 2;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    border-right: 2px solid themed("border");
+    background-color: themed("bg");
+    .l-container {
+      padding: 20px 30px;
+
+      .items {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          img {
+            width: 40px;
+            height: 40px;
+            border: 1px solid themed("border");
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          span {
+            font-size: 14px;
+            color: themed("textColor");
+          }
+        }
+      }
+    }
+  }
+}

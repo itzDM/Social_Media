@@ -1,0 +1,34 @@
+@import "../../style.scss";
+.stories {
+  @include themeChange($themes) {
+    display: flex;
+    gap: 10px;
+    height: 250px;
+    margin-bottom: 30px;
+    @include mobile {
+      height: 200px;
+    }
+
+    .story {
+      flex: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      span {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: whitesmoke;
+        font-size: 14px;
+      }
+    }
+  }
+}

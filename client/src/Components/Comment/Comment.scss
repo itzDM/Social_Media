@@ -1,0 +1,74 @@
+@import "../../style.scss";
+.comment {
+  @include themeChange($themes) {
+    margin: 10px;
+    .c-container {
+      padding: 10px;
+      .input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        input {
+          width: 70%;
+          padding: 10px;
+          border: 1px solid themed("border");
+          border-radius: 5px;
+          outline: themed("tcs");
+          background-color: themed("bg");
+          color: themed("textColor");
+          &::placeholder {
+            color: themed("tcs");
+          }
+          @include mobile {
+            width: 40%;
+            font-size: smaller;
+          }
+        }
+        button {
+          padding: 5px;
+          background: themed("btns");
+          color: themed("textColor");
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+      .c-info {
+        margin-bottom: 10px;
+
+        .u-info {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          span {
+            font-weight: 500;
+          }
+        }
+        .message {
+          display: flex;
+          justify-content: space-between;
+          margin-left: 4rem;
+          overflow-wrap: anywhere;
+          p {
+            font-size: 15px;
+            font-weight: 400;
+          }
+          span {
+            color: themed("tcs");
+            @include mobile {
+              font-size: smaller;
+            }
+          }
+        }
+      }
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+}

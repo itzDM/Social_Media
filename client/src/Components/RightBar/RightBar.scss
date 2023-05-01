@@ -1,0 +1,103 @@
+@import "../../style.scss";
+.rightBar {
+  @include tab {
+    display: none;
+  }
+  @include themeChange($themes) {
+    flex: 3;
+    position: sticky;
+    top: 70px;
+    height: calc(100vh - 70px);
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    border-left: 2px solid themed("border");
+    background-color: themed("bg");
+    .r-container {
+      padding: 10px 30px;
+      .online {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .o-item {
+          padding: 5px 20px;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+      }
+      .latest {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .l-item {
+          padding: 5px 20px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+      .suggestion {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .s-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          .f {
+            padding: 5px;
+            margin: 0 10px;
+            border: none;
+            background-color: themed("btns");
+            border: 1px solid themed("border");
+            border-radius: 5px;
+            color: themed("textColor");
+
+            cursor: pointer;
+          }
+          .d {
+            padding: 5px;
+            margin: 0 10px;
+            border: none;
+            background-color: themed("btnd");
+            border: 1px solid themed("border");
+            border-radius: 5px;
+            color: themed("textColor");
+            cursor: pointer;
+          }
+        }
+      }
+      .name {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+        border: 1px solid themed("border");
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .title {
+        font-size: 20px;
+        margin: 10px 0;
+        font-weight: 500;
+        color: themed("tcs");
+      }
+      span {
+        color: themed("textColor");
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../style.scss";
+.friends {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  @include themeChange($themes) {
+    button {
+      background-color: themed("btns");
+      padding: 5px;
+      border-radius: 5px;
+      color: themed("textColor");
+      cursor: pointer;
+    }
+  }
+}

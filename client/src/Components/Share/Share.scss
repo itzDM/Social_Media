@@ -1,0 +1,63 @@
+@import "../../style.scss";
+.share {
+  @include themeChange($themes) {
+    margin-bottom: 20px;
+    .s-container {
+      padding: 20px;
+      border-radius: 20px;
+      background-color: themed("bg");
+      box-shadow: -2px -1px 8px 1px themed("border");
+
+      .input-field {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        input {
+          width: 70%;
+          padding: 10px;
+          outline: none;
+          border-radius: 5px;
+          border: 1px solid themed("border");
+          background-color: themed("bg");
+          color: themed("textColor");
+          &::placeholder {
+            color: themed("tcs");
+          }
+          @include mobile {
+            width: 50%;
+            font-size: smaller;
+          }
+        }
+        button {
+          padding: 7px;
+          background-color: themed("btns");
+          border-radius: 5px;
+          color: themed("textColor");
+          border: themed("border");
+          cursor: pointer;
+        }
+      }
+
+      .input-icons {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        #file-input {
+          display: none;
+        }
+      }
+    }
+  }
+}

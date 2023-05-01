@@ -1,0 +1,70 @@
+@import "../../style.scss";
+.post {
+  @include themeChange($themes) {
+    border-radius: 20px;
+    background-color: themed("bg");
+    box-shadow: -2px -1px 8px 1px #8e7e7e;
+    .p-container {
+      padding: 20px;
+      .user {
+        display: flex;
+        align-items: center;
+        .user-cont {
+          display: flex;
+          gap: 20px;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        .user-detail {
+          display: flex;
+          flex-direction: column;
+          .name {
+            font-weight: 500;
+            line-height: 10%;
+          }
+
+          .date {
+            font-size: 12px;
+          }
+        }
+      }
+      .p-container {
+        img {
+          width: 100%;
+          max-height: 350px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 10px;
+          margin-top: 20px;
+        }
+      }
+      .bottom {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        color: themed("textColor");
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+          font-size: 14px;
+        }
+      }
+      a,
+      p {
+        color: themed("textColor");
+      }
+
+      span {
+        margin-top: 5px;
+        color: themed("tcs");
+      }
+    }
+  }
+}

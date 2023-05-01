@@ -1,0 +1,90 @@
+@import "../../style.scss";
+.messages {
+  @include themeChange($themes) {
+    margin: 25px 50px;
+    @include mobile {
+      margin: 25px 10px;
+    }
+    .mobile-view {
+      border-radius: 20px;
+      background-color: themed("bgSoft");
+      box-shadow: -2px -1px 8px 1px #8e7e7e;
+      color: themed("textColor");
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .m-container {
+      height: calc(100vh - 250px);
+      border-radius: 20px;
+      background-color: themed("bgSoft");
+      box-shadow: -2px -1px 8px 1px #8e7e7e;
+      color: themed("textColor");
+      // padding: 20px;
+
+      .m-box {
+        height: calc(100vh - 350px);
+        padding: 15px;
+        overflow: scroll;
+        padding: 10px;
+
+        overflow: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .user-info {
+          display: flex;
+          position: sticky;
+          align-items: center;
+          gap: 10px;
+          justify-content: center;
+          top: 0;
+        }
+      }
+      .type {
+        padding: 10px;
+
+        .type-box {
+          #file-input {
+            display: none;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          input {
+            width: 70%;
+            padding: 10px;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid themed("border");
+            background-color: themed("bg");
+            color: themed("textColor");
+            &::placeholder {
+              color: themed("tcs");
+            }
+            @include mobile {
+              width: 50%;
+              font-size: smaller;
+            }
+          }
+          button {
+            padding: 7px;
+            background-color: themed("btns");
+            border-radius: 5px;
+            color: themed("textColor");
+            border: themed("border");
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .warring {
+      color: rgb(168, 170, 170);
+      display: block;
+      font-size: larger;
+      text-align: center;
+    }
+  }
+}
